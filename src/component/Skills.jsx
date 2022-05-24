@@ -12,6 +12,9 @@ import tooldata from "./data/Toolsdata";
 import tooldata2 from "./data/Toolsdata2";
 import BuildIcon from '@mui/icons-material/Build';
 import CodeIcon from '@mui/icons-material/Code';
+import framework from "./data/librarydata";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGears } from "@fortawesome/free-solid-svg-icons";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -73,7 +76,8 @@ export default function Skills() {
           centered
         >
           <Tab label="Languages" icon={<CodeIcon />} iconPosition="start" {...a11yProps(0)} />
-          <Tab label="Tools" icon={<BuildIcon />} iconPosition="start" {...a11yProps(1)} />
+          <Tab label="Framework" icon={<FontAwesomeIcon icon={faGears} />} iconPosition="start" {...a11yProps(1)} />
+          <Tab label="Tools" icon={<BuildIcon />} iconPosition="start" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -101,7 +105,7 @@ export default function Skills() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Typography variant="h6" sx={{ color: "#edede8", textAlign: "center" }}>
-          Tools I use everyday
+          Library and framework I prefer to work with
         </Typography>
         <Box
           sx={{
@@ -111,18 +115,18 @@ export default function Skills() {
           }}
         >
           <Box>
-            {tooldata.map((data) => (
+            {framework.slice(0,2).map((data) => (
               <Skillcard label={data.label} icon={data.icon} />
             ))}
           </Box>
           <Box>
-            {tooldata2.map((data) => (
+            {framework.slice(2,).map((data) => (
               <Skillcard label={data.label} icon={data.icon} />
             ))}
           </Box>
         </Box>
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={2}>
         <Typography variant="h6" sx={{ color: "#edede8", textAlign: "center" }}>
           Tools I use everyday
         </Typography>
@@ -146,5 +150,6 @@ export default function Skills() {
         </Box>
       </TabPanel>
     </Box>
+    
   );
 }
