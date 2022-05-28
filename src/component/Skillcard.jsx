@@ -13,13 +13,13 @@ export default function Skillcard(props) {
   //   const { icon, label } = props;
   return (
     <Card sx={{ Width: "100%", background: "transparent", m: "0% auto" }}>
-      <CardContent sx={{ width: {md:"300px"} }}>
+      <CardContent sx={{ width: { md: "300px" } }}>
         <Icon>
           <FontAwesomeIcon
             icon={props.icon}
             color="hsla(41, 100%, 50%, 0.89)"
             viewBox="0 0 800 800"
-            style={{  height: "35px", width: "35px" }}
+            style={{ height: "35px", width: "35px" }}
           ></FontAwesomeIcon>
         </Icon>
         <Typography

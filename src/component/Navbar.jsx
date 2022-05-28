@@ -13,14 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Home from "./Home";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
-const pages = [
-  "Home",
-  "About",
-  "Skills",
-  "Experience",
-  "Projects",
-  "Contact",
-];
+const pages = ["Home", "About", "Skills", "Experience", "Projects", "Contact"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -84,23 +77,19 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem
-                  sx={{ backgroundColor: "#edede8" }}
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  name={page}
-                >
-                  <Typography textAlign="center">
-                   
-                    <NavLink to={`/#${page}`} smooth
-                    activeStyle={{ color: "red" }}
-                    isActive={(match, location) => {
-                      return match?.url === location?.pathname
-                    }}>
-                      {page}
-                    </NavLink>
-                  </Typography>
-                </MenuItem>
+                <NavLink to={`/#${page}`} smooth>
+                  <MenuItem
+                    sx={{
+                      backgroundColor: "#edede8",
+                      color: "hsla(41, 100%, 50%, 0.89)",
+                    }}
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    name={page}
+                  >
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </NavLink>
               ))}
             </Menu>
           </Box>
@@ -118,18 +107,19 @@ const Navbar = () => {
           </Typography>
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ ml: 2, color: "white", display: "block" }}
-              >
-                {/* console.log(${page}) */}
-
-                {/* <a href={`/${page}`}>{page}</a> */}
-                <NavLink activeClassName="current-page" to={`/#${page}`} smooth>
+              <NavLink to={`/#${page}`} smooth>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    ml: 2,
+                    color: "hsla(41, 100%, 50%, 0.89)",
+                    display: "block",
+                  }}
+                >
                   {page}
-                </NavLink>
-              </Button>
+                </Button>
+              </NavLink>
             ))}
           </Box>
         </Toolbar>

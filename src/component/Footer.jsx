@@ -6,7 +6,13 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 const Footer = () => {
   return (
-    <Box sx={{ background: "hsla(276, 66%, 36%, 0.39)", display: "flex" ,flexDirection:{xs:"column",md:"row"}}}>
+    <Box
+      sx={{
+        background: "hsla(276, 66%, 36%, 0.39)",
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+      }}
+    >
       <Box sx={{ p: "5% 20%", color: "#edede8" }}>
         <Typography variant="h5">Nitish J S</Typography>
         <Typography variant="subtitle1">Student at VIT University</Typography>

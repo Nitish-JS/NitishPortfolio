@@ -10,6 +10,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import "../App.css";
+import { NavHashLink } from "react-router-hash-link";
 const Home = () => {
   const descRef = useRef(null);
   useEffect(() => {
@@ -54,18 +55,19 @@ const Home = () => {
           <Typography variant="h6">
             A self learner and tech enthusiast.
           </Typography>
-
-          <Button
-            endIcon={<SendIcon />}
-            variant="contained"
-            sx={{
-              backgroundColor: "hsla(41, 100%, 50%, 0.89)",
-              mt: "10%",
-              padding: "3%",
-            }}
-          >
-            Get in touch
-          </Button>
+          <NavHashLink to="#Contact" smooth>
+            <Button
+              endIcon={<SendIcon />}
+              variant="contained"
+              sx={{
+                backgroundColor: "hsla(41, 100%, 50%, 0.89)",
+                mt: "10%",
+                padding: "3%",
+              }}
+            >
+              Get in touch
+            </Button>
+          </NavHashLink>
         </Box>
         <Box sx={{ mt: { xs: "5%", md: "0" }, textAlign: { xs: "center" } }}>
           <img

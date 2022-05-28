@@ -10,8 +10,8 @@ import data from "./data/skilldata";
 import data2 from "./data/skilldata2";
 import tooldata from "./data/Toolsdata";
 import tooldata2 from "./data/Toolsdata2";
-import BuildIcon from '@mui/icons-material/Build';
-import CodeIcon from '@mui/icons-material/Code';
+import BuildIcon from "@mui/icons-material/Build";
+import CodeIcon from "@mui/icons-material/Code";
 import framework from "./data/librarydata";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGears } from "@fortawesome/free-solid-svg-icons";
@@ -25,7 +25,6 @@ function TabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
-      
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
@@ -57,14 +56,11 @@ export default function Skills() {
   };
 
   return (
-    <Box sx={{p:{xs:"10% 5%",md:"5% 10%"}}} id="Skills">
-      <Typography
-        variant="h3"
-        sx={{ textAlign: "center", color: "#edede8"}}
-      >
+    <Box sx={{ p: { xs: "10% 5%", md: "5% 10%" } }} id="Skills">
+      <Typography variant="h3" sx={{ textAlign: "center", color: "#edede8" }}>
         Skills
       </Typography>
-      <Box sx={{ borderBottom: 1, borderColor: "divider",}}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -77,9 +73,24 @@ export default function Skills() {
           centered
           // sx={{p:{xs:"12px 4px", md:"16px"} }}
         >
-          <Tab label="Languages" icon={<CodeIcon />} iconPosition="start" {...a11yProps(0)} />
-          <Tab label="Framework" icon={<FontAwesomeIcon icon={faGears} />} iconPosition="start" {...a11yProps(1)} />
-          <Tab label="Tools" icon={<BuildIcon />} iconPosition="start" {...a11yProps(2)} />
+          <Tab
+            label="Languages"
+            icon={<CodeIcon />}
+            iconPosition="start"
+            {...a11yProps(0)}
+          />
+          <Tab
+            label="Framework"
+            icon={<FontAwesomeIcon icon={faGears} />}
+            iconPosition="start"
+            {...a11yProps(1)}
+          />
+          <Tab
+            label="Tools"
+            icon={<BuildIcon />}
+            iconPosition="start"
+            {...a11yProps(2)}
+          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -117,12 +128,12 @@ export default function Skills() {
           }}
         >
           <Box>
-            {framework.slice(0,2).map((data) => (
+            {framework.slice(0, 2).map((data) => (
               <Skillcard label={data.label} icon={data.icon} />
             ))}
           </Box>
           <Box>
-            {framework.slice(2,).map((data) => (
+            {framework.slice(2).map((data) => (
               <Skillcard label={data.label} icon={data.icon} />
             ))}
           </Box>
@@ -152,6 +163,5 @@ export default function Skills() {
         </Box>
       </TabPanel>
     </Box>
-    
   );
 }
