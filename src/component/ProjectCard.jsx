@@ -8,7 +8,7 @@ const ProjectCard = (props) => {
       sx={{
         display: "flex",
         flexDirection: { xs: "column", sm: "row" },
-        justifyContent: "space-evenly",
+        justifyContent: "space-around",
         alignContent: "center",
       }}
     >
@@ -18,7 +18,7 @@ const ProjectCard = (props) => {
       <Box>
         <Typography
           variant="subtitle1"
-          sx={{ color: "#edede8", textAlign: "center" }}
+          sx={{ color: "#edede8", textAlign: "center" ,p:"5% 10%"}}
         >
           {desc}
         </Typography>

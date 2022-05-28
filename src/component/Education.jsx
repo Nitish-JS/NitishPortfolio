@@ -11,7 +11,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 export default function Education() {
   return (
     <>
-      <Typography variant="h3" sx={{ color: "#edede8", textAlign: "center",pt:"4%" }} id="Experience">
+      <Typography variant="h3" sx={{ color: "#edede8", textAlign: "center",pt:"5%" }} id="Experience">
         Education
       </Typography>
       <Timeline position="alternate" >

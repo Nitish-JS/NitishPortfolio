@@ -1,7 +1,13 @@
 body {
   background-color: #010f20;
 }
-
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background:#edede8;
+  border-radius: 10px;
+}
 a:-webkit-any-link {
   text-decoration: none;
   /* color:hsla(41, 100%, 50%, 0.89); */
