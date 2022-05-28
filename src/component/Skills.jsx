@@ -25,6 +25,7 @@ function TabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
@@ -56,14 +57,14 @@ export default function Skills() {
   };
 
   return (
-    <Box sx={{ m: { md: "5% 15%" } }}>
+    <Box sx={{p:{xs:"10% 5%",md:"5% 10%"}}} id="Skills">
       <Typography
         variant="h3"
-        sx={{ textAlign: "center", color: "#edede8", mt: "15%" }}
+        sx={{ textAlign: "center", color: "#edede8"}}
       >
         Skills
       </Typography>
-      <Box sx={{ borderBottom: 1, borderColor: "divider", m: "2%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider",}}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -74,6 +75,7 @@ export default function Skills() {
             style: { backgroundColor: "hsla(41, 100%, 50%, 0.89)" },
           }}
           centered
+          // sx={{p:{xs:"12px 4px", md:"16px"} }}
         >
           <Tab label="Languages" icon={<CodeIcon />} iconPosition="start" {...a11yProps(0)} />
           <Tab label="Framework" icon={<FontAwesomeIcon icon={faGears} />} iconPosition="start" {...a11yProps(1)} />

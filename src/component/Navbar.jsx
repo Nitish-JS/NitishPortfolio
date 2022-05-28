@@ -11,26 +11,32 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Home from "./Home";
-import { HashLink as Link } from "react-router-hash-link";
+import { NavHashLink as NavLink } from "react-router-hash-link";
+
 const pages = [
   "Home",
   "About",
   "Skills",
   "Experience",
   "Projects",
-  "Contact me",
+  "Contact",
 ];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
-
+  // const [home,setHome]=useState(null);
+  // const [about,setAbout]=useState(null);
+  // const [skills,setSkills]=useState(null);
+  // // if(window.location.href=='#Home'){
+  // //   setHome(true);
+  // //   setAbout(null);
+  // //   setSkills(null);
+  // // }
   const handleOpenNavMenu = (event) => {
-    
     setAnchorElNav(event.currentTarget);
   };
 
   const handleCloseNavMenu = (event) => {
-    window.scrollTo(event.target);
     setAnchorElNav(null);
   };
 
@@ -74,6 +80,7 @@ const Navbar = () => {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
+                textDecoration: "none",
               }}
             >
               {pages.map((page) => (
@@ -83,7 +90,16 @@ const Navbar = () => {
                   onClick={handleCloseNavMenu}
                   name={page}
                 >
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                   
+                    <NavLink to={`/#${page}`} smooth
+                    activeStyle={{ color: "red" }}
+                    isActive={(match, location) => {
+                      return match?.url === location?.pathname
+                    }}>
+                      {page}
+                    </NavLink>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -107,7 +123,12 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ ml: 2, color: "white", display: "block" }}
               >
-                {page}
+                {/* console.log(${page}) */}
+
+                {/* <a href={`/${page}`}>{page}</a> */}
+                <NavLink activeClassName="current-page" to={`/#${page}`} smooth>
+                  {page}
+                </NavLink>
               </Button>
             ))}
           </Box>

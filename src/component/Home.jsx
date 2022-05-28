@@ -31,7 +31,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <Container sx={{ mt: { xs: "10%", md: "15%" } }}>
+    <Container sx={{ pt: { xs: "15%", md: "4%" } }} id="Home">
       <Box
         sx={{
           margin: [, , "12.5% 10%"],

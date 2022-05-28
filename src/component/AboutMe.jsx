@@ -5,7 +5,7 @@ import FileCopyIcon from "@mui/icons-material/FileCopy";
 import Resume from "./Nitish J S's Resume.pdf";
 const Aboutme = () => {
   return (
-    <Container id="About" sx={{ mt: "13%" }}>
+    <Container id="About" sx={{ pt:{xs:"15%", md:"10%" }}}>
       <Typography variant="h3" sx={{ textAlign: "center", color: "#edede8" }}>
         About me
       </Typography>
