@@ -2,7 +2,7 @@ import { Box, Container, Typography, Button } from "@mui/material";
 import React from "react";
 import Img from "../images/Image.jpeg";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
-import Resume from "./Nitish J S's Resume.pdf";
+import Resume from "./data/Nitish Resume.pdf";
 const Aboutme = () => {
   return (
     <Container id="About" sx={{ pt:{xs:"15%", md:"10%" }}}>
