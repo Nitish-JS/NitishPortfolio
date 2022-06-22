@@ -5,7 +5,7 @@ import FileCopyIcon from "@mui/icons-material/FileCopy";
 import Resume from "./data/Nitish Resume.pdf";
 const Aboutme = () => {
   return (
-    <Container id="About" sx={{ pt:{xs:"15%", md:"10%" }}}>
+    <Container id="About" sx={{ pt: { xs: "15%", md: "10%" } }}>
       <Typography variant="h3" sx={{ textAlign: "center", color: "#edede8" }}>
         About me
       </Typography>
@@ -19,10 +19,7 @@ const Aboutme = () => {
         }}
       >
         <Box sx={{ mt: { xs: "5%", md: "0" }, textAlign: { xs: "center" } }}>
-          <img
-            src={Img}
-            className="img"
-          ></img>
+          <img src={Img} className="img"></img>
         </Box>
         <Box
           sx={{
@@ -33,13 +30,15 @@ const Aboutme = () => {
           }}
         >
           <Typography variant="body1" sx={{ fontSize: "20px" }}>
-            I'm Nitish, a Sophomore pursuing B.Tech Computer Science and
-            Engingeering from VIT univeristy, Vellore.
+            I am Nitish J S, a sophomore at VIT, Vellore-majoring in Computer
+            Science and Engineering. I am a vivid learner with unquenchable
+            enthusiasm to learn and explore. I'm currently exploring full-stack
+            Web development using the MERN stack. 
           </Typography>
           <Typography variant="body1" sx={{ fontSize: "20px" }}>
-            I am an active learner exploring new domains and trying to learn new
-            Technologies to develop my skillset and use it to solve real world
-            problems.
+          I have extensive knowledge of
+            multiple programming languages, excellent problem-solving skills,
+            and the ability to perform well in teams.
           </Typography>
           <Button
             endIcon={<FileCopyIcon />}
