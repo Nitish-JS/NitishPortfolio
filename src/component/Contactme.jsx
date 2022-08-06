@@ -86,7 +86,6 @@ const ContactUs = () => {
               sx={{
                 background: "#011835",
                 borderRadius: "20px",
-
                 width: { xs: "100%", md: "45%" },
               }}
               id="name"
