@@ -30,7 +30,7 @@ const Aboutme = () => {
           }}
         >
           <Typography variant="body1" sx={{ fontSize: "20px" }}>
-            I am Nitish J S, a sophomore at VIT, Vellore-majoring in Computer
+            I am Nitish J S, a pre-final year student at VIT, Vellore-majoring in Computer
             Science and Engineering. I am a vivid learner with unquenchable
             enthusiasm to learn and explore. I'm currently exploring full-stack
             Web development using the MERN stack. 
