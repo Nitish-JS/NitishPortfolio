@@ -1,6 +1,6 @@
 import { Box, Container, Typography, Button } from "@mui/material";
 import React from "react";
-import Img from "../images/Image.jpeg";
+import Img from "../images/about.jpg";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import Resume from "./data/Nitish Resume.pdf";
 const Aboutme = () => {
@@ -30,15 +30,15 @@ const Aboutme = () => {
           }}
         >
           <Typography variant="body1" sx={{ fontSize: "20px" }}>
-            I am Nitish J S, a pre-final year student at VIT, Vellore-majoring in Computer
-            Science and Engineering. I am a vivid learner with unquenchable
-            enthusiasm to learn and explore. I'm currently exploring full-stack
-            Web development using the MERN stack. 
+            I am Nitish J S, a pre-final year student at VIT, Vellore-majoring
+            in Computer Science and Engineering. I am a vivid learner with
+            unquenchable enthusiasm to learn and explore. I'm currently
+            exploring full-stack Web development using the MERN stack.
           </Typography>
           <Typography variant="body1" sx={{ fontSize: "20px" }}>
-          I have extensive knowledge of
-            multiple programming languages, excellent problem-solving skills,
-            and the ability to perform well in teams.
+            I have extensive knowledge of multiple programming languages,
+            excellent problem-solving skills, and the ability to perform well in
+            teams.
           </Typography>
           <Button
             endIcon={<FileCopyIcon />}
