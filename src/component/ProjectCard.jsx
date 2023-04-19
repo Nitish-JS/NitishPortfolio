@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Typography } from "@mui/material";
 const ProjectCard = (props) => {
-  const { image, desc } = props;
+  const { image, desc, link } = props;
   return (
     <Box
       sx={{
@@ -13,12 +13,16 @@ const ProjectCard = (props) => {
       }}
     >
       <Box>
-        <img src={image} width="320px" height="240px"></img>
+        <a href={link}>
+          <img src={image} width="320px" height="240px"></img>
+        </a>
       </Box>
-      <Box>
+      <Box
+        sx={{ display: "flex", alignItems: "center", padding: "10px 40px " }}
+      >
         <Typography
           variant="subtitle1"
-          sx={{ color: "#edede8", textAlign: "center" ,p:"5% 10%"}}
+          sx={{ color: "#edede8", textAlign: "justify" }}
         >
           {desc}
         </Typography>

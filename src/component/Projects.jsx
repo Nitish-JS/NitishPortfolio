@@ -33,7 +33,7 @@ export default function App() {
         modules={[Autoplay,Pagination, Navigation]}
         style={{margin:"10% 20%"}}
       >
-        {ProjectData.map((data)=><SwiperSlide ><ProjectCard image={data.image} desc={data.desc}></ProjectCard></SwiperSlide>)}
+        {ProjectData.map((data)=><SwiperSlide ><ProjectCard image={data.image} desc={data.desc} link={data.link}></ProjectCard></SwiperSlide>)}
       </Swiper>
     </>
   );

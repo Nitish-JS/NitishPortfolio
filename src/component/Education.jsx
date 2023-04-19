@@ -25,7 +25,7 @@ export default function Education() {
               <Typography variant="h6">B.Tech CSE</Typography>
               <Typography>VIT University,</Typography>
               <Typography>Vellore.</Typography>
-              <Typography>CGPA: 9.19</Typography>
+              <Typography>CGPA: 9.13</Typography>
               <Typography><CalendarMonthIcon /> 2020-2024</Typography>
             </Box>
           </TimelineContent>
