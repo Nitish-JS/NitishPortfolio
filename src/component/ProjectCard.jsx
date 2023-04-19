@@ -22,7 +22,7 @@ const ProjectCard = (props) => {
       >
         <Typography
           variant="subtitle1"
-          sx={{ color: "#edede8", textAlign: "center" }}
+          sx={{ color: "#edede8", textAlign: "left" }}
         >
           {desc}
         </Typography>
