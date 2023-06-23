@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Home from "./Home";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
-const pages = ["Home", "About", "Skills", "Experience", "Projects", "Contact"];
+const pages = ["Home", "About", "Skills", "Experience","Education", "Projects", "Contact"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);

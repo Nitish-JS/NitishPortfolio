@@ -11,7 +11,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 export default function Education() {
   return (
     <>
-      <Typography variant="h3" sx={{ color: "#edede8", textAlign: "center",pt:"5%" }} id="Experience">
+      <Typography variant="h3" sx={{ color: "#edede8", textAlign: "center",pt:"5%" }} id="Education">
         Education
       </Typography>
       <Timeline position="alternate" >
@@ -25,7 +25,7 @@ export default function Education() {
               <Typography variant="h6">B.Tech CSE</Typography>
               <Typography>VIT University,</Typography>
               <Typography>Vellore.</Typography>
-              <Typography>CGPA: 9.13</Typography>
+              <Typography>CGPA: 9.22</Typography>
               <Typography><CalendarMonthIcon /> 2020-2024</Typography>
             </Box>
           </TimelineContent>

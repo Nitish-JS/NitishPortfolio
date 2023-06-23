@@ -10,6 +10,7 @@ import Projects from "./component/Projects";
 import ContactUs from "./component/Contactme";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Footer from "./component/Footer";
+import Experience from "./component/Experience";
 
 const theme = createTheme({
   typography: {
@@ -27,6 +28,7 @@ function App() {
         <Home />
         <Aboutme />
         <Skill />
+        <Experience />
         <Education />
         <Projects />
         <ContactUs />
